@@ -14,12 +14,12 @@ module.exports = app => {
                 .insert({
                     name: req.body.name,
                     email: req.body.email,
-                    password: req.body.password
+                    password: password
                 })
                 .then(_ => res.status(204).send())
                 .catch(err => res.status(400).json(err))
         })
     }
 
-    return { save }
+    return {save}
 }
